@@ -51,4 +51,4 @@ int main()
 
 ## 函数调用关系
 
-main()调用function1_solve()和function2_vertify(),function1_solve()和function2_vertify()调用create_link()和judge(),judge()调用delete_node()
+main()调用function1Solve()和function2Vertify(),function1Solve()和function2Vertify()调用createLink()和judge(),judge()调用deleteNode()
