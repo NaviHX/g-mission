@@ -1,3 +1,6 @@
+#ifndef __G_MISSION_H__
+#define __G_MISSION_H__
+
 typedef struct NODE//链表节点
 {
     int data;//编号
@@ -15,3 +18,5 @@ void function2Vertify(int n,int x,int y);
 int judge(int n,int x,int y);
 link createLink(int n);
 void deleteNode(nodeptr prev,nodeptr now);
+
+#endif
