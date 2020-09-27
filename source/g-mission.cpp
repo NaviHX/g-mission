@@ -29,4 +29,20 @@ void function2Vertify(int n,int x,int y)
     }
 }
 
-
+link createLink(int n)
+{
+    link ret;
+    nodeptr temp = NULL;
+    ret.size = n;
+    ret.head = (nodeptr)malloc(sizeof(node));
+    ret.head->data = 0;
+    ret.head->next = NULL;
+    while(n)
+    {
+        temp = (nodeptr)malloc(sizeof(node));
+        temp->next = ret.head->next;
+        ret.head->next = temp;
+        n--;
+    }
+    return ret;
+}
