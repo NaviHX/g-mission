@@ -46,3 +46,9 @@ link createLink(int n)
     }
     return ret;
 }
+
+void deleteNode(nodeptr prev, nodeptr now)
+{
+    prev->next = now->next;
+    free(now);
+}
