@@ -11,8 +11,14 @@ int main()
     int n, x, y;
     freopen("./testdata/test.in", "r", stdin);
     scanf("%d", &n);
+    printf("建立链表测试\n");
+    link th = createLink(n);
+    for (nodeptr i = th.head->next; i != th.head;i=i->next)
+        printf("%d ", i->data);
+    printf("\n功能一测试\n");
     function1Solve(n);
     scanf("%d %d %d", &n, &x, &y);
+    printf("功能二测试\n");
     function2Vertify(n, x, y);
     return 0;
 
