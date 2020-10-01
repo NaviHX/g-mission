@@ -10,7 +10,7 @@ void function1Solve(int n)
     {
         int i,j;
         for(i=1;i<=n;i++)
-            for(j=2;j<=n;j++)
+            for(j=1;j<=n;j++)
                 if(judge(n,i,j))
                     printf("使得加里森留到最后的x,y值为(%d,%d)\n", i, j);
     }
@@ -36,7 +36,7 @@ link createLink(int n)
     ret.size = n;
     ret.head = (nodeptr)malloc(sizeof(node));
     ret.head->data = 0;
-    ret.head->next = NULL;
+    ret.head->next = ret.head;
     while(n)
     {
         temp = (nodeptr)malloc(sizeof(node));
@@ -67,9 +67,10 @@ int judge(int n,int x,int y)
     while(list.size>1)
     {
         cnt = 0;
-        while(cnt<y)
+        while(cnt<y-1 || cur->data==0)
         {
-            cnt++;
+            if(cur->data!=0)
+                cnt++;
             cur = cur->next;
             pre = pre->next;
         }
