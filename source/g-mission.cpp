@@ -52,3 +52,28 @@ void deleteNode(nodeptr prev, nodeptr now)
     prev->next = now->next;
     free(now);
 }
+
+int judge(int n,int x,int y)
+{
+    link list = createLink(n);
+    int cnt;
+    nodeptr cur=list.head->next, pre=list.head;
+    while(cur->data!=x)
+    {
+        cur = cur->next;
+        pre = pre->next;
+    }
+    while(list.size>1)
+    {
+        cnt = 0;
+        while(cnt<y)
+        {
+            cnt++;
+            cur = cur->next;
+            pre = pre->next;
+        }
+        deleteNode(pre, cur);
+        list.size--;
+    }
+    return list.head->next->data == 1;
+}
