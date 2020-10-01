@@ -41,6 +41,7 @@ link createLink(int n)
     {
         temp = (nodeptr)malloc(sizeof(node));
         temp->next = ret.head->next;
+        temp->data = n;
         ret.head->next = temp;
         n--;
     }
