@@ -73,7 +73,9 @@ int judge(int n,int x,int y)
             cur = cur->next;
             pre = pre->next;
         }
-        deleteNode(pre, cur);
+        nodeptr temp = cur;
+        cur = cur->next;
+        deleteNode(pre, temp);
         list.size--;
     }
     return list.head->next->data == 1;
