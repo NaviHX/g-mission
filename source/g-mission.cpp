@@ -26,7 +26,7 @@ void function2Vertify(int n,int x,int y)
         if(judge(n,x,y))
             printf("加里森可以留到最后一个而不用执行任务\n");
         else
-            printf("加里森不能留到最后一个");
+            printf("加里森不能留到最后一个\n");
     }
 }
 
